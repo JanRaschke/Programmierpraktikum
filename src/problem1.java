@@ -9,16 +9,13 @@ public class problem1 {
 
         int mid = text.length() / 2;
 
-        if (text.length() % 2 == 0) {
+        String left = text.substring(0, mid);
+        String right = text.substring(mid, text.length());
 
-            String left = text.substring(0, mid);
-            String right = text.substring(mid, text.length());
+        int l = Integer.parseInt(left);
+        int r = Integer.parseInt(right);
 
-            System.out.println(left + " " + right);
-
-        } else {
-            System.out.println("Ungerade");
-        }
+        System.out.println(l + " " + r);
 
     }
 
