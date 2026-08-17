@@ -9,7 +9,7 @@ public class problem1 {
 
         int mid = text.length() / 2;
 
-        if (mid % 2 == 0) {
+        if (text.length() % 2 == 0) {
 
             String left = text.substring(0, mid);
             String right = text.substring(mid, text.length());
