@@ -9,10 +9,16 @@ public class problem1 {
 
         int mid = text.length() / 2;
 
-        String left = text.substring(0, mid);
-        String right = text.substring(mid, text.length());
+        if (mid % 2 == 0) {
 
-        System.out.println(left + " " + right);
+            String left = text.substring(0, mid);
+            String right = text.substring(mid, text.length());
+
+            System.out.println(left + " " + right);
+
+        } else {
+            System.out.println("Ungerade");
+        }
 
     }
 
