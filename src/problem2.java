@@ -15,7 +15,6 @@ public class problem2 {
             input[i] = StdIn.readInt();
         }
 
-        //Erstellen Tabelle 2 Dim für Paarberechnung
         int[][] table = new int[n][n];
 
         //Befüllen Tabelle mit Länge 1 jedes Elem zeigt auf sich selber 
