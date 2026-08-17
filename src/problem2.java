@@ -14,8 +14,8 @@ public class problem2 {
             input[i] = StdIn.readInt();
         }
 
-        int[][] table = new int[n][n];
 
+        int[][] table = new int[n][n];
         for (int i = 0; i < n; i++) {
             table[i][i] = input[i];
         }
