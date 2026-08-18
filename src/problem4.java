@@ -1,26 +1,29 @@
-import edu.princeton.cs.algs4.*;
+import java.io.*;
+import java.util.*;
 
 public class problem4 {
-    public static void main(String[] args) {
-        if (StdIn.isEmpty()) {
+    public static void main(String[] args) throws Exception {
+        // Schnelles Einlesen über BufferedReader initialisieren
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        if (line == null || line.trim().isEmpty())
             return;
-        }
 
-        int n = StdIn.readInt();
-        int k = StdIn.readInt();
+        // Erste Zeile parsen (enthält N und K)
+        StringTokenizer st = new StringTokenizer(line);
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
 
-        // Das B-Array einlesen (muss eingelesen werden, damit der Stream leer wird)
-        for (int i = 0; i < n; i++) {
-            int b = StdIn.readInt();
-        }
+        // Schnelle Ausgabe über BufferedWriter initialisieren
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // Für B_i = 1 geben wir einfach streng aufsteigende Zahlen aus: 1 2 3 ... N
+        // Für den Spezialfall B_i = 1: Ausgabe von 1 bis N (streng aufsteigend)
         for (int i = 1; i <= n; i++) {
-            StdOut.print(i);
-            if (i < n) {
-                StdOut.print(" ");
-            }
+            bw.write(i + (i == n ? "" : " "));
         }
-        StdOut.println();
+        bw.newLine();
+
+        // Puffer leeren und Daten schreiben
+        bw.flush();
     }
 }
